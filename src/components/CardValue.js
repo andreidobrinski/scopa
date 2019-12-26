@@ -1,18 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const buttonValues = [4, 3, 2, 1]
 
-const Button = ({ onClick, value, selected }) => {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      style={{ background: selected ? 'blue' : 'transparent' }}
-    >
-      {value}
-    </button>
-  )
-}
+const Button = styled.button.attrs(() => ({ type: 'button' }))`
+  background-color: ${({ selected }) =>
+    selected ? 'rebeccapurple' : 'transparent'};
+  color: ${({ selected }) => (selected ? 'white' : 'rebeccapurple')};
+  border: 1px solid rebeccapurple;
+  margin: 8px;
+  border-radius: 8px;
+`
 
 const CardValue = ({ card, dispatch, state }) => {
   return (
@@ -22,10 +20,11 @@ const CardValue = ({ card, dispatch, state }) => {
         return (
           <Button
             onClick={() => dispatch({ card, value })}
-            value={value}
             selected={state[card] === value}
             key={value}
-          />
+          >
+            {value}
+          </Button>
         )
       })}
     </div>
