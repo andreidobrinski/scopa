@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Scopa Premiera`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Scopa Primiera Score`,
+    description: `Calculate the primiera score in a game of Scopa.`,
+    author: `Andrei Dobrinski`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
