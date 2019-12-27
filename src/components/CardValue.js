@@ -2,27 +2,22 @@ import React from 'react'
 import styled from 'styled-components'
 import { buttonValues } from './constants'
 
-const CardValue = ({ card, dispatch, state }) => {
-  return (
-    <div>
-      <span style={{ textTransform: 'capitalize', width: '100px' }}>
-        {card}
-      </span>
-      :
-      {buttonValues.map(value => {
-        return (
-          <Button
-            onClick={() => dispatch({ card, value })}
-            selected={state[card] === value}
-            key={value}
-          >
-            {value}
-          </Button>
-        )
-      })}
-    </div>
-  )
-}
+const CardValue = ({ card, dispatch, state }) => (
+  <div>
+    <span style={{ textTransform: 'capitalize', width: '100px' }}>{card}</span>:
+    {buttonValues.map(value => {
+      return (
+        <Button
+          onClick={() => dispatch({ card, value })}
+          selected={state[card] === value}
+          key={value}
+        >
+          {value}
+        </Button>
+      )
+    })}
+  </div>
+)
 
 const Button = styled.button.attrs(() => ({ type: 'button' }))`
   background-color: ${({ selected }) => (selected ? '#7511C9' : 'transparent')};

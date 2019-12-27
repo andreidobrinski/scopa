@@ -6,7 +6,9 @@ export const initialState = {
   four: 0,
   three: 0,
   two: 0,
-  face: 0,
+  fante: 0,
+  cavallo: 0,
+  re: 0,
 }
 
 export const primieraValues = {
@@ -17,7 +19,9 @@ export const primieraValues = {
   four: 14,
   three: 13,
   two: 12,
-  face: 10,
+  fante: 10,
+  cavallo: 10,
+  re: 10,
 }
 
 export const buttonValues = [4, 3, 2, 1]
