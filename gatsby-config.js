@@ -4,6 +4,7 @@ module.exports = {
     description: `Calculate the primiera score in a game of Scopa.`,
     author: `Andrei Dobrinski`,
   },
+  pathPrefix: '/scopa',
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
