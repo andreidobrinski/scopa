@@ -19,7 +19,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Scopa Primiera Score" />
+      <SEO />
       <p>How many of each card do you have?</p>
       {Object.keys(initialState).map(card => (
         <CardValue card={card} dispatch={dispatch} state={state} key={card} />

@@ -10,7 +10,7 @@ const CardValue = ({ card, dispatch, state }) => (
         <Button
           onClick={() => dispatch({ card, value })}
           selected={state[card] === value}
-          key={value}
+          key={`${card}-${value}`}
         >
           {value}
         </Button>
