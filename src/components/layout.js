@@ -35,11 +35,13 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        {/* <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
+        <footer style={{ marginTop: '60px' }}>
+          Built with{' '}
+          <span role="img" aria-label="coffee emoji">
+            ☕
+          </span>{' '}
+          by <a href="https://andreidobrinski.github.io/">Andrei Dobrinski</a>
+        </footer>
       </div>
     </>
   )

@@ -2,28 +2,7 @@ import React, { useReducer } from 'react'
 import CardValue from '../components/CardValue'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
-const initialState = {
-  seven: 0,
-  six: 0,
-  ace: 0,
-  five: 0,
-  four: 0,
-  three: 0,
-  two: 0,
-  face: 0,
-}
-
-const primieraValues = {
-  seven: 21,
-  six: 18,
-  ace: 16,
-  five: 15,
-  four: 14,
-  three: 13,
-  two: 12,
-  face: 10,
-}
+import { initialState, primieraValues } from '../components/constants'
 
 const reducer = (state, action) => {
   if (state[action.card] === action.value) {
@@ -40,11 +19,14 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Scopa Primiera Score" />
+      <p>How many of each card do you have?</p>
       {Object.keys(initialState).map(card => (
         <CardValue card={card} dispatch={dispatch} state={state} key={card} />
       ))}
-      <p>Total: {total}</p>
+      <p style={{ marginTop: '16px' }}>
+        Total: <strong>{total}</strong>
+      </p>
     </Layout>
   )
 }

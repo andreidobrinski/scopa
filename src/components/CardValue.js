@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-
-const buttonValues = [4, 3, 2, 1]
+import { buttonValues } from './constants'
 
 const CardValue = ({ card, dispatch, state }) => {
   return (
     <div>
-      {card}:
+      <span style={{ textTransform: 'capitalize', width: '100px' }}>
+        {card}
+      </span>
+      :
       {buttonValues.map(value => {
         return (
           <Button
@@ -23,14 +25,16 @@ const CardValue = ({ card, dispatch, state }) => {
 }
 
 const Button = styled.button.attrs(() => ({ type: 'button' }))`
-  background-color: ${({ selected }) =>
-    selected ? 'rebeccapurple' : 'transparent'};
-  color: ${({ selected }) => (selected ? 'white' : 'rebeccapurple')};
-  border: 1px solid rebeccapurple;
+  background-color: ${({ selected }) => (selected ? '#7511C9' : 'transparent')};
+  color: ${({ selected }) => (selected ? 'white' : '#7511C9')};
+  transition: color 500ms, background-color 500ms;
+  border: 1px solid #7511c9;
   margin: 8px;
   border-radius: 8px;
   width: 40px;
   height: 40px;
+  font-size: 16px;
+  font-weight: 600;
 `
 
 export default CardValue
