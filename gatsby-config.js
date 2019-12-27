@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Scopa Primiera Score`,
+    title: `Scopa Primiera Calculator`,
     description: `Calculate the primiera score in a game of Scopa.`,
-    author: `Andrei Dobrinski`,
+    author: `@andreidobrinski`,
   },
   pathPrefix: '/scopa',
   plugins: [
