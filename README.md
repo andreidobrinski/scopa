@@ -6,3 +6,4 @@
 </h1>
 
 Calculate your primiera score in Scopa.
+https://andreidobrinski.github.io/scopa
