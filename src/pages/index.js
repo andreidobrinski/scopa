@@ -25,7 +25,7 @@ const IndexPage = () => {
         <CardValue card={card} dispatch={dispatch} state={state} key={card} />
       ))}
       <p style={{ marginTop: '16px' }}>
-        Total: <strong>{total}</strong>
+        Total: <strong>{total}</strong> points
       </p>
     </Layout>
   )
