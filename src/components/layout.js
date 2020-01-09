@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header'
-import CoinImage from './CoinImage'
+import CoinSvg from './CoinSvg'
 import './layout.css'
 
 const Layout = ({ children }) => {
@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <CoinImage />
+        <CoinSvg />
         <footer style={{ marginTop: '60px', marginBottom: '20px' }}>
           Built with{' '}
           <span role="img" aria-label="coffee emoji">
