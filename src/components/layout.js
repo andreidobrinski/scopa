@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           <span role="img" aria-label="coffee emoji">
             ☕
           </span>{' '}
-          by <a href="https://andreidobrinski.github.io/">Andrei Dobrinski</a>
+          by <a href="https://andreidobrinski.com/">Andrei Dobrinski</a>
         </footer>
       </div>
     </>
