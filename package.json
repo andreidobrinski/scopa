@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "scopa-calculator",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Calculate your primiera score in a game of Scopa.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Andrei Dobrinski",
   "dependencies": {
     "gatsby": "^3.1.1",
     "gatsby-image": "^3.1.0",
@@ -33,7 +33,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby clean && gatsby build --prefix-paths && gatsby serve",
+    "serve": "gatsby clean && gatsby build --prefix-paths && gatsby serve --prefix-paths",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
