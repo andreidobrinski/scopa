@@ -1,0 +1,2 @@
+(self.webpackChunkscopa_calculator=self.webpackChunkscopa_calculator||[]).push([[883],{9616:function(e,t,l){"use strict";l.r(t);var a=l(7294),n=l(5127),u=l(3751);t.default=function(){return a.createElement(n.Z,null,a.createElement(u.Z,{title:"404: Not found"}),a.createElement("h1",null,"NOT FOUND"),a.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-9c9d44005f532ad5ed19.js.map
