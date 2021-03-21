@@ -4,7 +4,7 @@ import { buttonValues, primieraValues } from './constants'
 
 const CardValue = ({ card, dispatch, state }) => (
   <ListItem>
-    <h3 style={{ textTransform: 'capitalize' }}>{card}</h3>:
+    <h4 style={{ textTransform: 'capitalize' }}>{card}</h4>:
     {buttonValues.map(value => (
       <Button
         onClick={() => dispatch({ card, value })}
