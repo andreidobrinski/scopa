@@ -23,7 +23,7 @@ module.exports = {
         href: to,
       })
   ),
-  StaticQuery: jest.fn().mockImplementationOnce(({ render }) =>
+  StaticQuery: jest.fn().mockImplementation(({ render }) =>
     render({
       data: {
         site: {
@@ -32,5 +32,9 @@ module.exports = {
       }
     })
   ),
-  useStaticQuery: jest.fn(),
+  useStaticQuery: jest.fn().mockImplementation(() => ({
+    site: {
+      siteMetadata: config.siteMetadata
+    },
+  })),
 }
