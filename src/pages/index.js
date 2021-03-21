@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 import CardValue from '../components/CardValue'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Total from '../components/Total'
 import { initialState, primieraValues } from '../components/constants'
 
 const reducer = (state, action) => {
@@ -20,13 +21,14 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <p>How many of each card do you have?</p>
-      {Object.keys(initialState).map(card => (
-        <CardValue card={card} dispatch={dispatch} state={state} key={card} />
-      ))}
-      <p style={{ marginTop: '16px' }}>
-        Total: <strong>{total}</strong> points
-      </p>
+      <h2>How many of each card do you have?</h2>
+      <Total value={total} />
+      <ul>
+        {Object.keys(initialState).map(card => (
+          <CardValue card={card} dispatch={dispatch} state={state} key={card} />
+        ))}
+      </ul>
+      <Total value={total} />
     </Layout>
   )
 }

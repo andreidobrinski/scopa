@@ -3,26 +3,25 @@ import styled from 'styled-components'
 import { buttonValues, primieraValues } from './constants'
 
 const CardValue = ({ card, dispatch, state }) => (
-  <section>
-    <span style={{ textTransform: 'capitalize' }}>{card}</span>:
-    {buttonValues.map(value => {
-      return (
-        <Button
-          onClick={() => dispatch({ card, value })}
-          selected={state[card] === value}
-          aria-pressed={state[card] === value}
-          key={`${card}-${value}`}
-        >
-          {value}
-        </Button>
-      )
-    })}
+  <ListItem>
+    <h4 style={{ textTransform: 'capitalize' }}>{card}</h4>:
+    {buttonValues.map(value => (
+      <Button
+        onClick={() => dispatch({ card, value })}
+        selected={state[card] === value}
+        aria-pressed={state[card] === value}
+        key={`${card}-${value}`}
+        aria-label={`select ${value} cards of ${card}`}
+      >
+        {value}
+      </Button>
+    ))}
     {state[card] > 0 && (
-      <span style={{ color: 'rgba(0,0,0,0.7)' }}>
+      <span style={{ color: 'rgba(0,0,0,0.7)' }} aria-label={`total for ${card}s`}>
         ({state[card] * primieraValues[card]})
       </span>
     )}
-  </section>
+  </ListItem>
 )
 
 const Button = styled.button.attrs(() => ({ type: 'button' }))`
@@ -36,6 +35,12 @@ const Button = styled.button.attrs(() => ({ type: 'button' }))`
   height: 40px;
   font-size: 16px;
   font-weight: 600;
+`
+
+const ListItem = styled.li`
+  list-style: none;
+  display: flex;
+  align-items: center;
 `
 
 export default CardValue

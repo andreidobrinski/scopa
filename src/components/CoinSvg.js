@@ -2,13 +2,13 @@ import React from 'react'
 
 const CoinSvg = () => (
   <svg
-    width="60"
-    height="60"
+    width="45"
+    height="45"
     viewBox="0 0 640 640"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"    
   >
-    <g clip-path="url(#clip0)">
+    <g clipPath="url(#clip0)">
       <circle cx="320" cy="320" r="300" fill="#11100B" />
       <path
         d="M278.514 170C274.365 170 271.468 165.889 272.864 161.982L314.35 45.8213C316.246 40.512 323.754 40.512 325.65 45.8213L367.136 161.982C368.532 165.889 365.635 170 361.486 170H278.514Z"
