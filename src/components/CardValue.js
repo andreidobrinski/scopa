@@ -11,13 +11,13 @@ const CardValue = ({ card, dispatch, state }) => (
         selected={state[card] === value}
         aria-pressed={state[card] === value}
         key={`${card}-${value}`}
-        aria-label={`select ${value} of ${card}`}
+        aria-label={`select ${value} cards of ${card}`}
       >
         {value}
       </Button>
     ))}
     {state[card] > 0 && (
-      <span style={{ color: 'rgba(0,0,0,0.7)' }}>
+      <span style={{ color: 'rgba(0,0,0,0.7)' }} aria-label={`total for ${card}s`}>
         ({state[card] * primieraValues[card]})
       </span>
     )}
