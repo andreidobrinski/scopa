@@ -1,3 +1,4 @@
+import './index.css';
 import React, { useReducer } from 'react'
 import CardValue from '../components/CardValue'
 import Layout from '../components/layout'
@@ -20,13 +21,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO />
-      <p>How many of each card do you have?</p>
-      {Object.keys(initialState).map(card => (
-        <CardValue card={card} dispatch={dispatch} state={state} key={card} />
-      ))}
-      <p style={{ marginTop: '16px' }}>
+      <h2>How many of each card do you have?</h2>
+      <ul>
+        {Object.keys(initialState).map(card => (
+          <CardValue card={card} dispatch={dispatch} state={state} key={card} />
+        ))}
+      </ul>
+      <h3 style={{ marginTop: '16px' }}>
         Total: <strong>{total}</strong> points
-      </p>
+      </h3>
     </Layout>
   )
 }
