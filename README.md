@@ -1,11 +1,8 @@
-<p align="center">
-  <img alt="coin" src="https://raw.githubusercontent.com/andreidobrinski/scopa/master/src/images/coin.png" width="60" />
-</p>
-<h1 align="center">
-  Scopa Primiera Calculator
-</h1>
+![demo gif](./scopa.gif)
 
-[Demo](https://andreidobrinski.com/scopa)
+# Scopa Primiera Calculator
+
+[Link to Demo](https://andreidobrinski.com/scopa)
 
 A site to help you calculate your primiera score in Scopa.
 
