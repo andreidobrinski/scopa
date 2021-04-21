@@ -37,3 +37,5 @@ npm start
 ## Resources
 
 - [Scopa Wiki](https://en.wikipedia.org/wiki/Scopa)
+
+<img src="./src/images/coin.png" alt="logo" width="100"/>
