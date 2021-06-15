@@ -71,13 +71,13 @@ describe('The index page ', () => {
   })
 
   test('clicking a button changes global total', () => {
-    const { getByLabelText, getAllByText } = setupApp()
+    const { getByLabelText, getByText } = setupApp()
     const threeSevensButton = getByLabelText(/select 3 cards of seven/)
-    const globalTotal = getAllByText(/total:/i)
 
     userEvent.click(threeSevensButton)
 
-    expect(globalTotal[0]).toHaveTextContent('Total: 63') // 3 * 21 = 63
+    const yourTotal = getByText(/your total:/i)
+    expect(yourTotal).toHaveTextContent('Total: 63') // 3 * 21 = 63
   })
 })
 
