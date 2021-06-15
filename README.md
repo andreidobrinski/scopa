@@ -9,6 +9,7 @@ A site to help you calculate your primiera score in Scopa.
 - Input the amount of each card you have
 - See the subtotal for each card value
 - See the total of all cards
+- Compare your total to your opponent's total
 
 ## Running Locally
 
