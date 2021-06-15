@@ -2,15 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import CoinSvg from './CoinSvg'
 
-const Total = ({ value }) => (
-  <Section>
-    <CoinSvg />
-    <h3>
-      Total: <strong>{value}</strong>
-    </h3>
-    <CoinSvg />
-  </Section>
-)
+const MAX_TOTAL = 556
+
+const Total = ({ value }) => {
+  if (!value) return null;
+
+  return (
+    <Section>
+      <CoinSvg />
+      <h3>
+        Your Total: <strong>{value}</strong>
+        <br />
+        Opponent's Total: <strong>{MAX_TOTAL - value}</strong>
+      </h3>
+      <CoinSvg />
+    </Section>
+  )
+}
 
 const Section = styled.section`
   display: flex;
@@ -18,6 +26,7 @@ const Section = styled.section`
   h3 {
     margin-left: 16px;
     margin-right: 16px;
+    text-align: right;
   }
 `
 

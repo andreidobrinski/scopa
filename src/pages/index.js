@@ -22,7 +22,6 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <h2>How many of each card do you have?</h2>
-      <Total value={total} />
       <ul>
         {Object.keys(initialState).map(card => (
           <CardValue card={card} dispatch={dispatch} state={state} key={card} />
