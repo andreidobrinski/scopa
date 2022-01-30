@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{ marginTop: '60px', marginBottom: '20px' }}>
+        <footer style={{ marginTop: '60px', marginBottom: '20px', textAlign: 'end' }}>
           Built with{' '}
           <span role="img" aria-label="coffee emoji">
             ☕
