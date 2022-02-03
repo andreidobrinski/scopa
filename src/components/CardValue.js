@@ -35,6 +35,7 @@ const Button = styled.button.attrs(() => ({ type: 'button' }))`
   height: 40px;
   font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
 `
 
 const ListItem = styled.li`
